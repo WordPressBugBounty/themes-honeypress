@@ -471,8 +471,8 @@ add_filter('honeypress_useful_plugins', 'honeypress_useful_plugins_array');
 
 function honeypress_recommended_plugins_array($plugins){
 
-$plugins[] = array(
-			'name'     => esc_html__('Spice Box','honeypress' ),
+		$plugins[] = array(
+			'name'     => esc_html__('SpiceBox','honeypress' ),
 			'slug'     => 'spicebox',
 			'function' => 'spiceb_activate',
 			'class'    => '',

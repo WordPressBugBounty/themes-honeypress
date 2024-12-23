@@ -95,3 +95,7 @@
 .customize-pane-child>li[id=customize-control-footer_widget_title_line_height] {width: 48% ; clear: none; padding-right: 5px;}
 .customize-pane-child>li[id=customize-control-footer_widget_content_fontsize] {width: 48% ; clear: none; padding-right: 5px;}
 .customize-pane-child>li[id=customize-control-footer_widget_content_line_height] {width: 48% ; clear: none; padding-right: 5px;}
+
+#customize-controls #customize-theme-controls .accordion-section-title button.accordion-trigger {
+  height: auto;
+}

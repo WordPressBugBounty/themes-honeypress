@@ -2,8 +2,8 @@
 
 Contributors: spicethemes
 Requires at least: 4.5
-Tested up to: 6.5
-Stable tag: 2.4.2
+Tested up to: 6.7
+Stable tag: 2.4.3
 Requires PHP: 5.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,9 @@ Honeypress WordPress Theme, Copyright (C) 2019-2024, SpiceThemes
 Honeypress is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+@Version 2.4.3
+* Fixed customizer styling issue.
 
 @Version 2.4.2
 * Fixed WooCommerce styling issues.
