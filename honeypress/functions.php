@@ -38,14 +38,14 @@ function honeypress_content_width() {
 add_action( 'after_setup_theme', 'honeypress_content_width', 0 );
 
 //About Theme
-$honeypress_theme = wp_get_theme(); // gets the current theme
-if ( 'HoneyPress' == $honeypress_theme->name)
-{
-	if ( is_admin() )
-	{
-        require HONEYPRESS_THEME_DIR . '/admin/admin-init.php';
-	}
-}
+add_action( 'init', function() {
+    $honeypress_theme = wp_get_theme(); // Gets the current theme
+    if ( 'HoneyPress' == $honeypress_theme->name ) {
+        if ( is_admin() ) {
+            require HONEYPRESS_THEME_DIR . '/admin/admin-init.php';
+        }
+    }
+});
 
 //Admin customizer preview
 if ( ! function_exists( 'honeypress_customizer_preview_scripts' ) ) {

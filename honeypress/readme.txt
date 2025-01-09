@@ -3,7 +3,7 @@
 Contributors: spicethemes
 Requires at least: 4.5
 Tested up to: 6.7
-Stable tag: 2.4.3
+Stable tag: 2.4.4
 Requires PHP: 5.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,10 +28,13 @@ In WordPress 5.8, the default widget title is showing in the H2 tag if you want 
 
 == License ==
 
-Honeypress WordPress Theme, Copyright (C) 2019-2024, SpiceThemes
+Honeypress WordPress Theme, Copyright (C) 2019-2025, SpiceThemes
 Honeypress is distributed under the terms of the GNU GPL
 
 == Changelog ==
+
+@Version 2.4.4
+* Fixed the Error notice issue.
 
 @Version 2.4.3
 * Fixed customizer styling issue.
@@ -274,4 +277,4 @@ https://pxhere.com/en/photo/1559651
 https://stocksnap.io/photo/XGXORJWZIX
 
 * Images on /assets/images folder
-Copyright (C) 2019-2022, SpcieThemes and available as [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Copyright (C) 2019-2025, SpcieThemes and available as [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Honeypress\n"
-"POT-Creation-Date: 2023-06-29 13:27+0530\n"
+"POT-Creation-Date: 2025-01-07 17:24+0530\n"
 "PO-Revision-Date: 2019-04-09 11:22+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -83,7 +83,7 @@ msgid "Getting Started"
 msgstr ""
 
 #: admin/inc/class-spicethemes-about-page.php:223
-#: inc/customizer/customizer-recommended-plugin.php:12
+#: inc/customizer/customizer-recommended-plugin.php:14
 msgid "Recommended Actions"
 msgstr ""
 
@@ -104,7 +104,7 @@ msgstr ""
 
 #: admin/inc/class-spicethemes-about-page.php:322
 #: inc/class-tgm-plugin-activation.php:2726
-#: inc/customizer/customizer-recommended-plugin.php:15
+#: inc/customizer/customizer-recommended-plugin.php:17
 msgid "Activate"
 msgstr ""
 
@@ -113,8 +113,9 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: admin/inc/class-spicethemes-about-page.php:475 functions.php:142
-msgid "Spice Box"
+#: admin/inc/class-spicethemes-about-page.php:475
+#: admin/inc/include-companion.php:80 admin/inc/include-companion.php:97
+msgid "SpiceBox"
 msgstr ""
 
 #: admin/inc/class-spicethemes-about-page.php:479
@@ -212,10 +213,6 @@ msgstr ""
 
 #: admin/inc/include-companion.php:80
 msgid "Install SpiceBox Now"
-msgstr ""
-
-#: admin/inc/include-companion.php:80 admin/inc/include-companion.php:97
-msgid "SpiceBox"
 msgstr ""
 
 #: admin/inc/include-companion.php:96
@@ -412,6 +409,10 @@ msgstr[1] ""
 
 #: comments.php:50
 msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:142
+msgid "Spice Box"
 msgstr ""
 
 #: header.php:22
@@ -1193,22 +1194,22 @@ msgstr ""
 msgid "Dedicated support, widget and sidebar management."
 msgstr ""
 
-#: inc/customizer/customizer-recommended-plugin.php:8
+#: inc/customizer/customizer-recommended-plugin.php:10
 #, php-format
 msgid ""
 "Install and activate the %s plugin to take full advantage of all the "
 "features this theme has to offer."
 msgstr ""
 
-#: inc/customizer/customizer-recommended-plugin.php:13
+#: inc/customizer/customizer-recommended-plugin.php:15
 msgid "Recommended Plugin"
 msgstr ""
 
-#: inc/customizer/customizer-recommended-plugin.php:14
+#: inc/customizer/customizer-recommended-plugin.php:16
 msgid "Install and Activate"
 msgstr ""
 
-#: inc/customizer/customizer-recommended-plugin.php:16
+#: inc/customizer/customizer-recommended-plugin.php:18
 msgid "Deactivate"
 msgstr ""
 
