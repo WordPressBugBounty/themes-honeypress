@@ -1,9 +1,9 @@
 <?php if( !is_attachment() ): ?>
-   <article class="blog-author media">
+   <article class="blog-author media d-flex">
       <figure class="avatar">
          <?php echo get_avatar( $post->post_author , 250 ); ?>
    	</figure>
-   	<div class="media-body align-self-center">
+   	<div class="align-self-center">
          <h5 class="post-by"><?php esc_html_e( 'Written by: ' , 'honeypress' );?></h5>
       	<h4 class="name"><?php honeypress_get_author_name( $post );?></h4>
       	<p class="mb-2">

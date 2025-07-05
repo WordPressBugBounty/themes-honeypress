@@ -4,9 +4,9 @@ Theme URI: https://spicethemes.com/honeypress-wordpress-theme/
 Author: spicethemes
 Author URI: https://spicethemes.com
 Description: HoneyPress is a lightweight, elegant and fully featured theme, crafted for businesses, magazines, newspaper, personal blogs, online shops, restaurants, wedding planners, gyms, and more. HoneyPress has special features like a slider banner, testimonials, services, and blogs. It's fully responsive and compatible with any device. Easy to use and implement, HoneyPress is also compatible with WooCommerce. You can easily import dummy data with the SpiceBox plugin.
-Version: 2.4.4
+Version: 2.4.5
 Requires at least: 4.5
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.4
 Tags: one-column, two-columns, right-sidebar, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, rtl-language-support, e-commerce
 License: GNU General Public License v2 or later
@@ -2733,3 +2733,7 @@ nav.rank-math-breadcrumb a:hover {  color: #2d6ef8 !important; }
 	font-size: 1.5rem;
 	font-weight: 700;
 }
+.input-group-append{display: flex;}
+@media (min-width: 1200px) {.container {max-width: 1140px;}}
+.page-title-section .row {position: relative;}
+.nav-link:focus-visible {box-shadow: unset;outline: thin dotted;}
