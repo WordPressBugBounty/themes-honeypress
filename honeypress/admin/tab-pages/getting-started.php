@@ -15,7 +15,7 @@
 			<div class="col-md-12">
 			    <div class="honeypress-page" style="border: none;box-shadow: none;">
 					<div class="mockup">
-			    		<img src="<?php echo HONEYPRESS_THEME_URI.'/admin/assets/img/mockup-lite.png';?>"  width="100%">
+			    		<img src="<?php echo esc_url( HONEYPRESS_THEME_URI . '/admin/assets/img/mockup-lite.png' ); ?>" width="100%">
 			    	</div>
 				</div>	
 			</div>		

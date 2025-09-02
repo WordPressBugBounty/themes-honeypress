@@ -96,7 +96,7 @@ if( !function_exists('honeypress_breadcrumbs') ):
 								<?php
 								if (is_search())
 								{
-									echo '<h1 class="text-white">'. get_search_query() .'</h1>';
+									echo '<h1 class="text-white">'. esc_html(get_search_query()) .'</h1>';
 								}
 								else if(is_404())
 								{
@@ -104,7 +104,7 @@ if( !function_exists('honeypress_breadcrumbs') ):
 								}
 								else if(is_category())
 								{
-									echo '<h1 class="text-white">'. ( esc_html__('Category: ','honeypress').single_cat_title( '', false ) ) .'</h1>';	
+									echo '<h1 class="text-white">' . esc_html__('Category: ', 'honeypress') . esc_html( single_cat_title( '', false ) ) . '</h1>';	
 								}
 								else if ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() )
 								{ 
@@ -119,11 +119,11 @@ if( !function_exists('honeypress_breadcrumbs') ):
 		                		}
 		                		elseif( is_tag() )
 		                		{
-		                			echo '<h1 class="text-white">'. ( esc_html__('Tag : ','honeypress') .single_tag_title( '', false ) ) .'</h1>';
+		                			echo '<h1 class="text-white">' . esc_html__('Tag : ', 'honeypress') . esc_html(single_tag_title( '', false )) . '</h1>';
 		                		}
 		                		else if(is_archive())
 								{	
-								the_archive_title( '<h1 class="text-white">', '</h1>' ); 
+									the_archive_title( '<h1 class="text-white">', '</h1>' ); 
 								}
 			                    else
 			                    { ?>

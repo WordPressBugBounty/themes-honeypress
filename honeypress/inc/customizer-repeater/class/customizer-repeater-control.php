@@ -533,7 +533,7 @@ class Honeypress_Repeater extends WP_Customize_Control {
                 <?php esc_html_e('Icon','honeypress'); ?>
             </span>
 			<span class="description customize-control-description">
-                <?php
+                <?php // translators: %1$s is the URL to the full list of icons.
                 echo sprintf(
 	                esc_html__( 'Note: Some icons may not be displayed here. You can see the full list of icons at %1$s.', 'honeypress' ),
 	                sprintf( '<a href="%1$s" rel="nofollow">%s</a>', esc_html__( 'http://fontawesome.io/icons/', 'honeypress' ) )

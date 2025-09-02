@@ -49,6 +49,7 @@
 						$honeypress_shop_button .= '<i class="fa fa-cart-plus" aria-hidden="true"></i>';
 					}
 				$honeypress_shop_button .= '</a>';
+				// translators: %d is the number of items in the cart.
 				$honeypress_shop_button .= '<a href="'.esc_url($honeypress_cart_link).'" ><span class="cart-total">'.sprintf(_n('%d <span>item</span>', '%d <span>items</span>', $woocommerce->cart->cart_contents_count, 'honeypress'), $woocommerce->cart->cart_contents_count).'</span></a>';
 				}
 			}

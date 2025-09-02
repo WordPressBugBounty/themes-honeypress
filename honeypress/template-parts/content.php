@@ -51,7 +51,7 @@
 		if($honeypress_read_btn=="excerpt")
 		{
 		?>
-		<p><a href="<?php the_permalink();?>" class="more-link"><?php _e('Read more','honeypress'); ?></a></p>
+		<p><a href="<?php the_permalink();?>" class="more-link"><?php esc_html_e('Read more','honeypress'); ?></a></p>
 	<?php } ?>
 	</div>										
 </article>
