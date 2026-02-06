@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Honeypress\n"
-"POT-Creation-Date: 2025-08-13 12:25+0530\n"
+"POT-Creation-Date: 2025-10-06 16:37+0530\n"
 "PO-Revision-Date: 2019-04-09 11:22+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,13 +10,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -412,6 +413,12 @@ msgstr ""
 
 #: functions.php:142
 msgid "Spice Box"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: functions.php:285
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #: header.php:22
@@ -889,7 +896,7 @@ msgstr ""
 
 #: inc/customizer-repeater/class/customizer-repeater-control.php:257
 #: inc/customizer-repeater/class/customizer-repeater-control.php:404
-#: inc/customizer/customizer_sections_settings.php:51
+#: inc/customizer/customizer_sections_settings.php:72
 msgid "Title"
 msgstr ""
 
@@ -900,7 +907,7 @@ msgstr ""
 
 #: inc/customizer-repeater/class/customizer-repeater-control.php:271
 #: inc/customizer-repeater/class/customizer-repeater-control.php:418
-#: inc/customizer/customizer_sections_settings.php:62
+#: inc/customizer/customizer_sections_settings.php:83
 msgid "Description"
 msgstr ""
 
@@ -1369,31 +1376,41 @@ msgstr ""
 msgid "Homepage Section Settings"
 msgstr ""
 
-#: inc/customizer/customizer_sections_settings.php:26
-msgid "Latest News Settings"
+#: inc/customizer/customizer_sections_settings.php:27
+msgid "Gutenberg Editor settings"
 msgstr ""
 
-#: inc/customizer/customizer_sections_settings.php:35
-msgid "Enable Home News Section"
-msgstr ""
-
-#: inc/customizer/customizer_sections_settings.php:39
-msgid "ON"
+#: inc/customizer/customizer_sections_settings.php:36
+msgid "Enable Page Editor"
 msgstr ""
 
 #: inc/customizer/customizer_sections_settings.php:40
+#: inc/customizer/customizer_sections_settings.php:60
+msgid "ON"
+msgstr ""
+
+#: inc/customizer/customizer_sections_settings.php:41
+#: inc/customizer/customizer_sections_settings.php:61
 msgid "OFF"
 msgstr ""
 
-#: inc/customizer/customizer_sections_settings.php:47 index-news.php:8
+#: inc/customizer/customizer_sections_settings.php:47
+msgid "Latest News Settings"
+msgstr ""
+
+#: inc/customizer/customizer_sections_settings.php:56
+msgid "Enable Home News Section"
+msgstr ""
+
+#: inc/customizer/customizer_sections_settings.php:68 index-news.php:8
 msgid "Vitae Lacinia"
 msgstr ""
 
-#: inc/customizer/customizer_sections_settings.php:58 index-news.php:9
+#: inc/customizer/customizer_sections_settings.php:79 index-news.php:9
 msgid "Cras Vitae Placerat"
 msgstr ""
 
-#: inc/customizer/customizer_sections_settings.php:80
+#: inc/customizer/customizer_sections_settings.php:101
 msgid "Enable post meta values, like author name, date, comments, etc."
 msgstr ""
 

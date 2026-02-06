@@ -14,12 +14,33 @@ function honeypress_sections_settings( $wp_customize ){
 
 $selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
-/* Sections Settings */
+	/* Sections Settings */
 	$wp_customize->add_panel( 'section_settings', array(
 		'priority'       => 126,
 		'capability'     => 'edit_theme_options',
 		'title'      => esc_html__('Homepage Section Settings','honeypress'),
 	) );
+
+
+	//Page editor Section
+	$wp_customize->add_section('honeypress_gutenberg_editor_section',array(
+				'title' => esc_html__('Gutenberg Editor settings','honeypress'),
+				'panel' => 'section_settings',
+				'priority'       => 2,
+	));
+
+
+	// Enable editor section
+	$wp_customize->add_setting( 'gutenberg_editor_section_enable' , array( 'default' => 'on',  'sanitize_callback' => 'honeypress_sanitize_radio',) );
+	$wp_customize->add_control(	'gutenberg_editor_section_enable' , array(
+			'label'    => esc_html__( 'Enable Page Editor', 'honeypress' ),
+			'section'  => 'honeypress_gutenberg_editor_section',
+			'type'     => 'radio',
+			'choices' => array(
+				'on'=>esc_html__('ON', 'honeypress'),
+				'off'=>esc_html__('OFF', 'honeypress')
+			)
+	));
 
 	//Latest News Section
 	$wp_customize->add_section('honeypress_latest_news_section',array(
