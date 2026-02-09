@@ -147,3 +147,12 @@ function honeypress_register_custom_controls( $wp_customize ) {
 }
 endif;
 add_action( 'customize_register', 'honeypress_register_custom_controls' );
+
+// callback function for editor button
+function honeypress_editor_button_callback($control) {
+    if('on' == $control->manager->get_setting('gutenberg_editor_section_enable')->value()) {
+        return true;
+    } else {
+        return false;
+    }
+}
