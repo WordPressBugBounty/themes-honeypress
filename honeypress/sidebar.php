@@ -1,12 +1,9 @@
 <?php
 /**
- * Template file for sidebar
+ * Wrapper for sidebar.php
  */
-
-if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-	<div class="col-lg-4 col-md-5 col-sm-12">
-		<div class="sidebar s-l-space">
-		<?php dynamic_sidebar('sidebar-1');?>								
-		</div>
-	</div>
-<?php endif; ?>
+if ( function_exists( 'hp_fs' ) && hp_fs()->can_use_premium_code() ) {
+    require get_parent_theme_file_path( '/pro/sidebar.php' );
+} else {
+    require get_parent_theme_file_path( '/free/sidebar.php' );
+}

@@ -1,27 +1,9 @@
 <?php
 /**
- * Footer Widget Area
- *
- * @package Honeypress
+ * Wrapper for sidebar-footer.php
  */
-?>
-<div class="row footer-sidebar">
-	 <?php 
-        $honeypress_footer_widget=get_theme_mod('footer_widgets_section',3);
-        switch ( $honeypress_footer_widget )
-        {   
-          case 2:
-          get_template_part('inc/footer-widget/layout-1');
-          break;
-
-          case 3:
-          get_template_part('inc/footer-widget/layout-2');
-          break;
-
-          case 4:
-          get_template_part('inc/footer-widget/layout-3');
-          break;
-
-        }
-?>
-</div>
+if ( function_exists( 'hp_fs' ) && hp_fs()->can_use_premium_code() ) {
+    require get_parent_theme_file_path( '/pro/sidebar-footer.php' );
+} else {
+    require get_parent_theme_file_path( '/free/sidebar-footer.php' );
+}

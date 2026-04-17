@@ -1,13 +1,9 @@
 <?php
 /**
- * side bar template
- *
+ * Wrapper for sidebar-woocommerce.php
  */
-?>
-<div class="col-lg-4 col-md-5 col-sm-12">
-	<div class="sidebar">
-	<?php if ( is_active_sidebar( 'woocommerce' )  ) : 
-		 	dynamic_sidebar( 'woocommerce' );
-		endif; ?>
-	</div>
-</div>	
+if ( function_exists( 'hp_fs' ) && hp_fs()->can_use_premium_code() ) {
+    require get_parent_theme_file_path( '/pro/sidebar-woocommerce.php' );
+} else {
+    require get_parent_theme_file_path( '/free/sidebar-woocommerce.php' );
+}

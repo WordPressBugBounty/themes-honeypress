@@ -1,14 +1,9 @@
 <?php
-get_header();?>
-<div class="clearfix"></div>
-<section class="section-module blog woocommerce">
-	<div class="container">
-		<div class="row">	
-			<div class="col-md-<?php echo ( !is_active_sidebar( 'woocommerce' ) ? '12' :'8' ); ?> col-xs-12">
-				<?php woocommerce_content(); ?>
-			</div>	
-			<?php get_sidebar('woocommerce'); ?>
-		</div>
-	</div>
-</section>
-<?php get_footer(); ?>
+/**
+ * Wrapper for woocommerce.php
+ */
+if ( function_exists( 'hp_fs' ) && hp_fs()->can_use_premium_code() ) {
+    require get_parent_theme_file_path( '/pro/woocommerce.php' );
+} else {
+    require get_parent_theme_file_path( '/free/woocommerce.php' );
+}
