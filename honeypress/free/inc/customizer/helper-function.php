@@ -156,3 +156,13 @@ function honeypress_editor_button_callback($control) {
         return false;
     }
 }
+
+// callback function for releted post 
+function honeypress_releted_post_callback( $control ) {
+    if( true == $control->manager->get_setting ('honeypress_enable_related_post')->value()){
+        return true;
+    }
+    else {
+        return false;
+    }
+}  

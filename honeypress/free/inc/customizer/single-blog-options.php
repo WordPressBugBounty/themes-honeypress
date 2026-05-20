@@ -13,6 +13,39 @@ $wp_customize->add_section('honeypress_single_blog_section',
 		'priority' => 5
 	));
 
+$wp_customize->add_setting('honeypress_enable_related_post',
+	array(
+		'default' => true,
+		'sanitize_callback' => 'honeypress_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(new Honeypress_Toggle_Control( $wp_customize, 'honeypress_enable_related_post',
+	array(
+		'label' => esc_html__('Enable / Disable Related Post', 'honeypress'),
+		'type' => 'ios',
+		'section' => 'honeypress_single_blog_section',
+		'priority' => 1,
+	)
+));
+
+/************************* Related Post Title  *********************************/
+
+$wp_customize->add_setting('honeypress_related_post_title', 
+	array(
+		'default' => __('Related Posts', 'honeypress'),
+		'sanitize_callback' => 'sanitize_text_field',
+	)
+);
+$wp_customize->add_control('honeypress_related_post_title', 
+	array(
+		'label' => __('Related Post Title', 'honeypress'),
+		'type' => 'text',
+		'active_callback' => 'honeypress_releted_post_callback',
+		'section' => 'honeypress_single_blog_section',
+		'priority' => 2,
+	)
+);
+
 
 $wp_customize->add_setting('honeypress_enable_single_post_category',
 	array(

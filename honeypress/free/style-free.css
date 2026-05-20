@@ -2722,3 +2722,46 @@ nav.rank-math-breadcrumb a:hover {  color: #2d6ef8 !important; }
 .page-title-section .row {position: relative;}
 .nav-link:focus-visible {box-shadow: unset;outline: thin dotted;}
 .text-right{text-align: right;}
+/*--------------------------------------------------------------
+ Pagination Css
+--------------------------------------------------------------*/
+.hp-pagination-single.hp-pagi-design {box-shadow: unset;margin: 0;transform: unset;
+  text-align: unset;display: flex;flex-wrap: wrap;justify-content: space-between;margin-bottom: 40px;
+  background-color: #fff;padding: 0;position: relative;gap: 20px;}
+.hp-pagination-single.hp-pagi-design .hp-post-previous, .hp-pagination-single.hp-pagi-design .hp-post-next {display: flex;flex-basis: 100%;
+    max-width: 100%; background-color: #F5F6FA;margin-bottom: 0px;padding: 10px 20px;flex-direction: column-reverse;}
+@media (min-width: 600px) {.hp-pagination-single.hp-pagi-design:has(.hp-post-next) .hp-post-previous, .hp-pagi-design.hp-pagination-single:has(.hp-post-previous) .hp-post-next {
+    flex-basis: 45%;max-width: 45%;}}   
+.hp-pagination-single.hp-pagi-design .hp-post-content {padding: 0.25rem 0.5rem;}
+.hp-pagination-single.hp-pagi-design .hp-post-next .hp-post-content {padding-right: 12px;text-align: right;}
+.hp-pagination-single.hp-pagi-design .hp-entry-title {font-weight: 700;font-size: 1.25rem;margin: 0;}
+.hp-pagi-design .hp_nxt_post,.hp-pagi-design .hp_prvs_post{font-size:0.813rem;font-weight:700;color: #737F85;margin-bottom: 0.5rem;
+display: block;}
+
+.hp-pagination-single.hp-pagi-design a{text-decoration: none;}
+.hp-pagination-single.hp-pagi-design .hp-post-overlay .hp-post-thumbnail {
+    width: 80px;height: auto;margin: 0;}
+ .pagina-wrap{display: flex;align-items: center;column-gap:15px;}     
+.hp-pagi-design a.hp_prvs_arrow,.hp-pagi-design a.hp_nxt_arrow{display: flex;align-items: center;padding: 6px;color: #404B56;}    
+.hp-post-next .pagina-wrap{flex-direction: row-reverse;}
+.hp-pagi-design a.hp_prvs_post:before, .hp-pagi-design a.hp_nxt_post:after {font-size: 0.813rem; font-family: "Font Awesome 5 Free";
+    position: relative;} 
+.hp-pagi-design a.hp_prvs_post:before {content: "\f177";padding-right: 5px;}
+.hp-pagi-design a.hp_nxt_post:after{content: "\f178";padding-left: 5px;}
+.blog .standard-view.blog-single .post {margin-bottom: 2.375rem;}
+
+/*Related Posts*/
+.blog .standard-view .related-posts .entry-title {
+    font-size: 1.250rem;
+}
+.blog .standard-view .related-posts .post {
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 2.000rem;
+}
+@media(max-width:600px){
+	.hp-pagination-single.hp-pagi-design .hp-post-next .hp-post-content {
+	   padding-right: 12px;
+	   text-align: left;
+	}
+}

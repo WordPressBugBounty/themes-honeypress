@@ -296,3 +296,120 @@ if (!function_exists('honeypress_edit_link')) :
             );
     } 
 endif;
+
+/* ---------------------------------------------- /*
+ * Single Post Navigation
+/* ---------------------------------------------- */
+
+function honeypress_single_posts_nav(){
+    $next_post = get_next_post();
+    $prev_post = get_previous_post();
+  
+    if ( $next_post || $prev_post ) : ?>
+
+        <!-- Pagination -->       
+        <article class="hp-pagination-single hp-pagi-design">
+            <?php if ( ! empty( $prev_post ) ) : ?>
+            <div class="hp-post-previous">
+                <div class="hp-post-content">
+                    <a class="hp_prvs_post" href="<?php echo esc_url(get_permalink( $prev_post )); ?>" title="<?php esc_attr_e('Previous post','honeypress'); ?>"><?php esc_html_e('Previous post','honeypress');?></a>
+                    <h4 class="hp-entry-title">
+                    <a class="hp-title" href="<?php echo esc_url(get_permalink( $prev_post )); ?>" title="<?php echo esc_attr(get_the_title( $prev_post )); ?>"><?php echo esc_html(get_the_title( $prev_post )); ?></a>
+                    </h4>
+                </div>
+            </div>
+            <?php endif; 
+            if ( ! empty( $next_post ) ) : ?>
+            <div class="hp-post-next">
+                 <div class="hp-post-content">
+                    <a class="hp_nxt_post" href="<?php echo esc_url(get_permalink( $next_post )); ?>" title="<?php esc_attr_e('Next post','honeypress'); ?>"><?php esc_html_e('Next post','honeypress');?></a>
+                    <h4 class="hp-entry-title">
+                        <a class="hp-title" href="<?php echo esc_url(get_permalink( $next_post )); ?>" title="<?php echo esc_attr(get_the_title( $next_post )); ?>"><?php echo esc_html(get_the_title( $next_post )); ?></a>
+                    </h4>
+                </div>
+            </div>
+            <?php endif; ?>
+        </article>
+      <!-- /Pagination -->       
+    <?php endif;
+}
+
+/* =============================================================
+    *                    Related Post
+  ================================================================ */
+
+function honeypress_single_post_related() {
+
+    honeypress_single_posts_nav(); 
+
+    $honeypress_related_post_title = get_theme_mod('honeypress_related_post_title',__('Related Posts','honeypress'));
+
+     if(get_theme_mod('honeypress_enable_related_post',true) == true):
+
+    // Get the current post's ID
+    $current_post_id = get_the_ID();
+    // Get the categories of the current post
+    $categories = get_the_category($current_post_id);
+    if ($categories!=null) {
+        $category_ids = array();
+        foreach ($categories as $category) {
+            $category_ids[] = $category->term_id;
+        }
+    }
+    
+    $args = array(
+        'ignore_sticky_posts' => 1,
+        'post__not_in' => array($current_post_id), // Exclude the current post
+        'category__in' => $category_ids, // Include posts from the same categories
+        'posts_per_page' => 2,
+    );
+
+    $query_args = new WP_Query($args); 
+    if ($query_args->have_posts())  { ?>
+
+<article class="related-posts">
+   <?php
+   if(!empty($honeypress_related_post_title)):?>
+   <div class="comment-title">
+      <h3><?php echo esc_html(get_theme_mod('honeypress_related_post_title',__('Related Posts','honeypress')));?></h3>
+   </div>
+<?php endif;?>
+
+   <div class="row">
+         <?php
+
+         while ($query_args->have_posts()) : $query_args->the_post(); ?>
+
+         <div class="col-lg-6 col-md-6 col-sm-12">
+            <article class="post">
+               <figure class="post-thumbnail">
+                   <?php
+                        if(has_post_thumbnail()):?>
+                        <a href="<?php the_permalink();?>"><?php the_post_thumbnail('full',array('class'=>'img-fluid'));?></a>
+                     <?php else:?>
+                        <a href="<?php the_permalink();?>">
+                           <img class="img-fluid" src="<?php echo esc_url( HONEYPRESS_THEME_URI . '/assets/images/featured/related.png' ); ?>">
+                        </a>  
+                     <?php endif;?>                   
+               </figure>
+               <div class="post-content">
+                  <?php
+                  if(has_category()):?>
+                  <div class="entry-meta">
+                     <span class="cat-links"><?php the_category( ' ' );?></span>
+                  </div>
+               <?php endif;?>
+                  <header class="entry-header">
+                     <h4 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+                  </header>
+               </div>
+            </article>
+         </div>
+         <?php endwhile;  wp_reset_postdata();?>
+     
+   </div>
+</article>
+<?php }
+endif;
+}
+add_action('honeypress_single_post_hook','honeypress_single_post_related');

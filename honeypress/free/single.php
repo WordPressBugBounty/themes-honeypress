@@ -19,6 +19,9 @@ get_header();?>
 				while(have_posts()): the_post();
 					get_template_part('free/template-parts/content','single');	
 				endwhile;
+
+				do_action('honeypress_single_post_hook');
+				
 				if(get_theme_mod('honeypress_enable_single_post_admin_details',true)===true):
 					get_template_part('free/template-parts/auth-details');
 				endif;	
